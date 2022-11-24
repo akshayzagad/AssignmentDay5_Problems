@@ -6,12 +6,14 @@ public class PrimeFactorial {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int number = scanner.nextInt();
-        for (int i = 2; i <= number; i++) {
+        for (int i = 2; i < number; i++) {
             if (checkPrime(i)) {
                 while (number % i == 0) {
                     System.out.println(i + " ");
                    number=number/i;
                 }
+            }      if (number>2){
+                System.out.println(number);
             }
         }
     }
